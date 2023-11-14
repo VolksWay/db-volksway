@@ -16,10 +16,11 @@ CREATE TABLE tb_usuario(
     nome VARCHAR(50) NOT NULL,
     telefone CHAR(15) NOT NULL UNIQUE,
     email VARCHAR(50) NOT NULL UNIQUE,
-    senha VARCHAR(50) NOT NULL UNIQUE,
+    senha VARCHAR(256) NOT NULL UNIQUE,
     data_nascimento DATE NOT NULL,
     cidade VARCHAR(50) NOT NULL,
     cpf CHAR(14) NOT NULL UNIQUE,
+    img VARCHAR(256) UNIQUE,
     tipo_usuario TINYINT NOT NULL,
     PRIMARY KEY (id_usuario),
     FOREIGN KEY(id_empresa) REFERENCES tb_empresa(id_empresa)
