@@ -20,7 +20,7 @@ CREATE TABLE tb_usuario(
     data_nascimento DATE NOT NULL,
     cidade VARCHAR(50) NOT NULL,
     cpf CHAR(14) NOT NULL UNIQUE,
-    img VARCHAR(256) UNIQUE,
+    img VARCHAR(256) NOT NULL,
     tipo_usuario TINYINT NOT NULL,
     PRIMARY KEY (id_usuario),
     FOREIGN KEY(id_empresa) REFERENCES tb_empresa(id_empresa)
