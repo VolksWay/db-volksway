@@ -16,7 +16,7 @@ CREATE TABLE tb_usuario(
     nome VARCHAR(50) NOT NULL,
     telefone CHAR(15) NOT NULL UNIQUE,
     email VARCHAR(50) NOT NULL UNIQUE,
-    senha VARCHAR(256) NOT NULL UNIQUE,
+    senha VARCHAR(256) NOT NULL,
     data_nascimento DATE NOT NULL,
     cidade VARCHAR(50) NOT NULL,
     cpf CHAR(14) NOT NULL UNIQUE,
