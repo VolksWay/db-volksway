@@ -52,7 +52,7 @@ CREATE TABLE tb_checklist(
 CREATE TABLE tb_propaganda(
 	id_propaganda BINARY(16) NOT NULL,
     id_usuario BINARY(16) NOT NULL,
-    titulo VARCHAR(256) NOT NULL,
+    titulo VARCHAR(50) NOT NULL,
     url VARCHAR(256) NOT NULL,
     descricao VARCHAR(256) NOT NULL,
 	img VARCHAR(256) NOT NULL,
