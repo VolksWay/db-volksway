@@ -44,6 +44,7 @@ CREATE TABLE tb_checklist(
     oleo BIT NOT NULL,
     ar_condicionado BIT NOT NULL,
     foto_pneu VARCHAR(256) NOT NULL,
+    data_criado DATE NOT NULL,
     PRIMARY KEY (id_checklist),
     FOREIGN KEY(id_veiculo) REFERENCES tb_veiculo(id_veiculo)
 );
@@ -51,7 +52,7 @@ CREATE TABLE tb_checklist(
 CREATE TABLE tb_propaganda(
 	id_propaganda BINARY(16) NOT NULL,
     id_usuario BINARY(16) NOT NULL,
-    titulo VARCHAR(50) NOT NULL,
+    titulo VARCHAR(256) NOT NULL,
     url VARCHAR(256) NOT NULL,
     descricao VARCHAR(256) NOT NULL,
 	img VARCHAR(256) NOT NULL,
@@ -59,7 +60,7 @@ CREATE TABLE tb_propaganda(
 	data_limite DATE NOT NULL,
     preco FLOAT(10,2) NOT NULL,
     importancia BIT NOT NULL,
-    nomeTipoPropaganda VARCHAR(20) NOT NULL,
+    nome_tipo_propaganda VARCHAR(20) NOT NULL,
     PRIMARY KEY (id_propaganda),
     FOREIGN KEY(id_usuario) REFERENCES tb_usuario(id_usuario)
 );
