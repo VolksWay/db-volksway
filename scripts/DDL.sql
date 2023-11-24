@@ -1,5 +1,7 @@
 CREATE DATABASE db_volksway;
 
+DROP DATABASE db_volksway;
+
 USE db_volksway;
 
 CREATE TABLE tb_empresa(
@@ -59,7 +61,7 @@ CREATE TABLE tb_propaganda(
 	data_limite DATE NOT NULL,
     preco FLOAT(10,2) NOT NULL,
     importancia BIT NOT NULL,
-    nomeTipoPropaganda VARCHAR(20) NOT NULL,
+    nome_tipo_propaganda VARCHAR(20) NOT NULL,
     PRIMARY KEY (id_propaganda),
     FOREIGN KEY(id_usuario) REFERENCES tb_usuario(id_usuario)
 );
