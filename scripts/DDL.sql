@@ -38,15 +38,16 @@ CREATE TABLE tb_veiculo(
 
 CREATE TABLE tb_checklist(
 	id_checklist BINARY(16) NOT NULL,
-    id_veiculo BINARY(16) NOT NULL,
+    id_usuario BINARY(16) NOT NULL,
     freio BIT NOT NULL,
     combustivel BIT NOT NULL,
     oleo BIT NOT NULL,
     ar_condicionado BIT NOT NULL,
     foto_pneu VARCHAR(256) NOT NULL,
     data_criado DATE NOT NULL,
+    estado_pneu VARCHAR(256) NOT NULL,
     PRIMARY KEY (id_checklist),
-    FOREIGN KEY(id_veiculo) REFERENCES tb_veiculo(id_veiculo)
+    FOREIGN KEY(id_usuario) REFERENCES tb_usuario(id_usuario)
 );
 
 CREATE TABLE tb_propaganda(
